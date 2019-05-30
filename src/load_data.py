@@ -5,6 +5,8 @@ from tqdm import tqdm, tqdm_notebook
 
 MODULE_PATH = os.path.dirname(os.path.realpath(__file__))
 FUNC_DATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'functional')
+OUTCOME_DATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'outcome')
+METADATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'metadata')
 
 
 def _load_data_from_paths(paths, geo_level, column_set, notebook):
@@ -22,9 +24,9 @@ def _load_data_from_paths(paths, geo_level, column_set, notebook):
     Return:
         single pandas Dataframe of data from specified paths.
     """
-    strict_column_set = {'msa': ['MSA', 'YEAR', 'NAICS', 'EMP', 'PAYANN', 'ESTAB'],
+    strict_column_set = {'msa': ['MSA', 'YEAR', 'NAICS', 'emp_imputed', 'PAYANN', 'ESTAB'],
                          'county': ['FIPS', 'YEAR', 'naics_level',
-                                    'naics', 'EMP', 'PAYANN', 'ESTAB']}
+                                    'naics', 'emp_imputed', 'PAYANN', 'ESTAB']}
 
     progress_bar = tqdm_notebook if notebook else tqdm
     res = []
@@ -139,13 +141,33 @@ def load_by_geo(geo_codes, geo_level, column_set='strict', notebook=True):
     return _load_data_from_paths(paths, geo_level, column_set, notebook)
 
 
-def load_outcome_data():
-    pass
+def load_outcome_data(geo_level='county'):
+    """Load outcome data to a data frame.
+
+    Keyword Arguments:
+        :: geo_level {str} -- 'county' or 'msa' (default: {'county'})
+    Returns:
+        pandas Dataframe of CBP data.
+    """
+    path = os.path.join(OUTCOME_DATA, f'acs_{geo_level}.csv')
+    return pd.read_csv(path)
 
 
-def get_variables_by_topic(topics):
-    pass
+def load_all_functional_data(geo_level='county'):
+    """Load all functional (CBP) data to a dataframe.
+    Could be very slow & consumes a lot of memory.
+
+    Keyword Arguments:
+        :: geo_level {str} -- 'county' or 'msa' (default: {'county'})
+
+    Returns:
+        pandas Dataframe of functional data.
+    """
+    print('Warning: This may take over 5 minutes & consumes > 10GB of memory')
+    path = os.path.join(FUNC_DATA, f'cbp_all_{geo_level}.csv')
+    return pd.read_csv(path)
 
 
-def variable_search(search_terms):
-    pass
+def load_outcome_metadata():
+    path = os.path.join(METADATA, 'outcome_metadata.csv')
+    return pd.read_csv(path)

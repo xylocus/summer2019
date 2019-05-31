@@ -150,7 +150,7 @@ def load_outcome_data(geo_level='county'):
         pandas Dataframe of CBP data.
     """
     path = os.path.join(OUTCOME_DATA, f'acs_{geo_level}.csv')
-    return pd.read_csv(path)
+    return pd.read_csv(path, dtype=str)
 
 
 def load_all_functional_data(geo_level='county'):
@@ -165,9 +165,9 @@ def load_all_functional_data(geo_level='county'):
     """
     print('Warning: This may take over 5 minutes & consumes > 10GB of memory')
     path = os.path.join(FUNC_DATA, f'cbp_all_{geo_level}.csv')
-    return pd.read_csv(path)
+    return pd.read_csv(path, dtype=str)
 
 
 def load_outcome_metadata():
     path = os.path.join(METADATA, 'outcome_metadata.csv')
-    return pd.read_csv(path)
+    return pd.read_csv(path, dtype=str)

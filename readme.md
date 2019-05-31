@@ -1,9 +1,19 @@
-#Setup:
+# Setup:
 
-#Use:
+`git clone https://github.com/LocusAnalytics/LocusSummer2019Data.git`
+Download data.zip from:
+and unzip into the same directory.
+`cd` to that directory, in your environment, `pip install -e .`
+
+# Use:
+
 All data loading functions will return pandas DataFrame.
 
-##For functional data (organized by NAICS codes)
+```python
+from LocusSummerData import load_data
+```
+
+## For functional data (organized by NAICS codes)
 
 You can load data selectively by geography (FIPS or MSA codes),
 NAICS codes or NAICS levels, or by year.

@@ -141,19 +141,7 @@ def load_by_geo(geo_codes, geo_level, column_set='strict', notebook=True):
     return _load_data_from_paths(paths, geo_level, column_set, notebook)
 
 
-def load_outcome_data(geo_level='county'):
-    """Load outcome data to a data frame.
-
-    Keyword Arguments:
-        :: geo_level {str} -- 'county' or 'msa' (default: {'county'})
-    Returns:
-        pandas Dataframe of CBP data.
-    """
-    path = os.path.join(OUTCOME_DATA, f'acs_{geo_level}.csv')
-    return pd.read_csv(path, dtype=str)
-
-
-def load_all_functional_data(geo_level='county'):
+def load_functional_data(geo_level='county'):
     """Load all functional (CBP) data to a dataframe.
     Could be very slow & consumes a lot of memory.
 
@@ -164,7 +152,20 @@ def load_all_functional_data(geo_level='county'):
         pandas Dataframe of functional data.
     """
     print('Warning: This may take over 5 minutes & consumes > 10GB of memory')
-    path = os.path.join(FUNC_DATA, f'cbp_all_{geo_level}.csv')
+    path = os.path.join(FUNC_DATA, f'cbp_{geo_level}.csv')
+    return pd.read_csv(path, dtype=str)
+
+
+def load_outcome_data(geo_level='county', dataset='cleaned'):
+    """Load outcome data to a data frame.
+
+    Keyword Arguments:
+        :: geo_level {str} -- 'county' or 'msa' (default: {'county'})
+        :: dataset {str} -- 'all' or 'cleaned' (default: {'cleaned'})
+    Returns:
+        pandas Dataframe of CBP data.
+    """
+    path = os.path.join(OUTCOME_DATA, f'acs_{dataset}_{geo_level}.csv')
     return pd.read_csv(path, dtype=str)
 
 

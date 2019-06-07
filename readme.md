@@ -1,7 +1,6 @@
 # Setup:
 
 Clone this repo:
-`git clone https://github.com/LocusAnalytics/LocusSummer2019Data.git`
 Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
 and unzip into the same directory.
 `cd` to that directory, in your environment, `pip install -e .`

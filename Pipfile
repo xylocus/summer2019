@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pandas = "*"
+glob3 = "*"
+tqdm = "*"
+numpy = "*"
+scikit-learn = "*"
+geoviz = "*"
+matplotlib = "*"
+locushandler = "*"
+locuscomplexity = "*"
+seaborn = "*"
+ipywidgets = "*"
+statsmodels = "*"
+us = "*"
+requests = "*"
+jupyter = "*"
+
+[requires]
+python_version = "3.7"

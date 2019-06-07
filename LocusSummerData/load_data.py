@@ -172,3 +172,36 @@ def load_outcome_data(geo_level='county', dataset='cleaned'):
 def load_outcome_metadata():
     path = os.path.join(METADATA, 'outcome_metadata.csv')
     return pd.read_csv(path, dtype=str)
+
+
+def long_to_wide(df, geo):
+    """Given df in long format, convert to wide on variable column"""
+    df['year_geo'] = df['YEAR'] + '_'+df[geo]
+    pivot = df[['year_geo', 'value', 'explanation']].set_index(
+        ['year_geo']).pivot(values='value', columns='explanation')
+    pivot = pivot.reset_index()
+    pivot['YEAR'] = pivot['year_geo'].apply(lambda x: x.split('_')[0])
+    pivot[geo] = pivot['year_geo'].apply(lambda x: x.split('_')[1])
+    pivot = pivot.drop('year_geo', axis=1)
+    return pivot
+
+
+def get_data_from_metadata(query, nf, geo_level):
+    """
+    Given metadata query - a DataFrame with at least these columns:
+    year, variable_name, topic, explanation
+    And nf - a DataFrame containing functional data with at least
+    YEAR & variable column (which has format topic_variable_name)
+    Return the data for these year + variable_name + topic combination
+    at the specified geographical level.
+    """
+    d = {'msa': 'MSA', 'county': 'FIPS'}
+    geo = d[geo_level]
+    nf = nf[['YEAR', geo, 'variable', 'value']]
+    nf = nf[
+        nf[geo] != 'Id2'
+    ]
+    query['variable'] = query['topic'] + '_' + query['variable_name']
+    query = query.rename(columns={'year': 'YEAR'})
+    merged = nf.merge(query, on=['YEAR', 'variable'])
+    return long_to_wide(merged, geo)

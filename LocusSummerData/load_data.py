@@ -4,9 +4,11 @@ import glob
 from tqdm import tqdm, tqdm_notebook
 
 MODULE_PATH = os.path.dirname(os.path.realpath(__file__))
-FUNC_DATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'functional')
-OUTCOME_DATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'outcome')
-METADATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'metadata')
+FUNC_DATA = os.path.join(MODULE_PATH, os.pardir,
+                         'data', 'external', 'functional')
+OUTCOME_DATA = os.path.join(MODULE_PATH, os.pardir,
+                            'data', 'external', 'outcome')
+METADATA = os.path.join(MODULE_PATH, os.pardir, 'data', 'external', 'metadata')
 
 
 def _load_data_from_paths(paths, geo_level, column_set, notebook):

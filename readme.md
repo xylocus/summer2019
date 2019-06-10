@@ -1,10 +1,19 @@
 # Setup:
 
-Clone this repo:
+Clone this repo.
+
+**Folder structure**
+With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
+
+**Data download**
 Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
 and unzip into /data/external.
-`cd` to that directory, in your environment, `pip install -e .`
-or from any location, `pip install -e /path/to/LocusSummerDataDirectory/`
+
+**Virtual environment**
+`cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
+
+To use this virtual environment, run `pipenv shell`
+and to use it in a jupyter notebook, then run `pipenv run jupyter`.
 
 # Use:
 

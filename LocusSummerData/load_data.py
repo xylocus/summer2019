@@ -158,16 +158,15 @@ def load_functional_data(geo_level='county'):
     return pd.read_csv(path, dtype=str)
 
 
-def load_outcome_data(geo_level='county', dataset='cleaned'):
+def load_outcome_data(geo_level='county'):
     """Load outcome data to a data frame.
 
     Keyword Arguments:
         :: geo_level {str} -- 'county' or 'msa' (default: {'county'})
-        :: dataset {str} -- 'all' or 'cleaned' (default: {'cleaned'})
     Returns:
         pandas Dataframe of CBP data.
     """
-    path = os.path.join(OUTCOME_DATA, f'acs_{dataset}_{geo_level}.csv')
+    path = os.path.join(OUTCOME_DATA, f'acs_{geo_level}.csv')
     return pd.read_csv(path, dtype=str)
 
 

@@ -54,11 +54,15 @@ load_data.load_all_functional_data(geo_level='county')
 ```
 
 
-Other references:
-Visualizing and Analyzing Data
+**Other references for Visualizing and Analyzing Data**
 [Locus DB guide](https://github.com/LocusAnalytics/locus_db)
+
 [Locus Handler guide](https://pypi.org/project/locushandler/#description)
+
 [Locus geoviz tutorial](https://locusanalytics.github.io/files/geoviz_tutorial.html)
+
 [Pandas cheatsheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
 [Ipywidgets tutorial](https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6)
+
 [General guideline to visualization tools](https://docs.google.com/document/d/1zCktFbAPwyzxRcTPvQ9dQKPdgYANo6hdsUM3y0LRbyg/edit?ts=5bb247a0)

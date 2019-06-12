@@ -1,19 +1,21 @@
 # Setup:
 
-Clone this repo.
 
-**Folder structure**
+1. **Git** Clone this repo.
+
+2. **Folder structure**
 With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
 
-**Data download**
+3. **Data download**
 Download data.zip from [this Google Drive](https://drive.google.com/open?id=1WOCEjWeKMWWiYBfYG26KoIeBcmxCXzUP)
 and unzip into /data/external.
 
-**Virtual environment**
+
+4. **Virtual environment**
 `cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
 
 To use this virtual environment, run `pipenv shell`
-and to use it in a jupyter notebook, then run `pipenv run jupyter`.
+and to use it in a jupyter notebook, run `pipenv run jupyter notebook` when the shell is activated.
 
 # Use:
 
@@ -52,3 +54,19 @@ You can also load all functional data at once, then do your own filtering. Howev
 ```python
 load_data.load_all_functional_data(geo_level='county')
 ```
+
+
+# Other references
+[Locus DB guide](https://github.com/LocusAnalytics/locus_db)
+
+[Locus Handler guide](https://pypi.org/project/locushandler/#description)
+
+[Locus geoviz tutorial](https://locusanalytics.github.io/files/geoviz_tutorial.html)
+
+[Pandas cheatsheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
+[Ipywidgets tutorial](https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6)
+
+[General guideline to visualization tools](https://docs.google.com/document/d/1zCktFbAPwyzxRcTPvQ9dQKPdgYANo6hdsUM3y0LRbyg/edit?ts=5bb247a0)
+
+[General git workflow guide](https://docs.google.com/document/d/1Zg2YwPPEoc-gTL3bmD6a_uc4NKLoTLsPZIqx9o5OstA/edit)

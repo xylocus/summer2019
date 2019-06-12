@@ -1,7 +1,7 @@
 # Setup:
 
-**Git**
-1. Clone this repo.
+
+**Git** 1. Clone this repo.
 
 **Folder structure**
 2. With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
@@ -55,7 +55,7 @@ load_data.load_all_functional_data(geo_level='county')
 ```
 
 
-**Other references for Visualizing and Analyzing Data**
+# Other references for Visualizing and Analyzing Data
 [Locus DB guide](https://github.com/LocusAnalytics/locus_db)
 
 [Locus Handler guide](https://pypi.org/project/locushandler/#description)

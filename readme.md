@@ -1,16 +1,17 @@
 # Setup:
 
-Clone this repo.
+**Git**
+1. Clone this repo.
 
 **Folder structure**
-With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
+2. With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
 
 **Data download**
-Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
+3. Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
 and unzip into /data/external.
 
 **Virtual environment**
-`cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
+4. `cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
 
 To use this virtual environment, run `pipenv shell`
 and to use it in a jupyter notebook, run `pipenv run jupyter notebook` when the shell is activated.

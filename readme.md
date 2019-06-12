@@ -55,7 +55,7 @@ load_data.load_all_functional_data(geo_level='county')
 ```
 
 
-# Other references for Visualizing and Analyzing Data
+# Other references
 [Locus DB guide](https://github.com/LocusAnalytics/locus_db)
 
 [Locus Handler guide](https://pypi.org/project/locushandler/#description)
@@ -67,3 +67,5 @@ load_data.load_all_functional_data(geo_level='county')
 [Ipywidgets tutorial](https://towardsdatascience.com/interactive-controls-for-jupyter-notebooks-f5c94829aee6)
 
 [General guideline to visualization tools](https://docs.google.com/document/d/1zCktFbAPwyzxRcTPvQ9dQKPdgYANo6hdsUM3y0LRbyg/edit?ts=5bb247a0)
+
+[General git workflow guide](https://docs.google.com/document/d/1Zg2YwPPEoc-gTL3bmD6a_uc4NKLoTLsPZIqx9o5OstA/edit)

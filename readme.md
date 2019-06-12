@@ -6,7 +6,7 @@ Clone this repo.
 With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
 
 **Data download**
-Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
+Download data.zip from [this Google Drive](https://drive.google.com/open?id=1WOCEjWeKMWWiYBfYG26KoIeBcmxCXzUP)
 and unzip into /data/external.
 
 **Virtual environment**

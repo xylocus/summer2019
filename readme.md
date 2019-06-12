@@ -7,8 +7,9 @@
 With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
 
 3. **Data download**
-Download data.zip from [this Google Drive](https://drive.google.com/file/d/19kf-TO5XSbtqTDIgS0lW3btXuTtTNxI4/view?usp=sharing)
+Download data.zip from [this Google Drive](https://drive.google.com/open?id=1WOCEjWeKMWWiYBfYG26KoIeBcmxCXzUP)
 and unzip into /data/external.
+
 
 4. **Virtual environment**
 `cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.

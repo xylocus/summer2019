@@ -1,18 +1,16 @@
 # Setup:
 
-
 1. **Git** Clone this repo.
 
 2. **Folder structure**
-With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
+   With the ‘Makefile’ file in folder where repo is cloned, run `make init` to automatically create the standardized folder structure.
 
 3. **Data download**
-Download data.zip from [this Google Drive](https://drive.google.com/open?id=1WOCEjWeKMWWiYBfYG26KoIeBcmxCXzUP)
-and unzip into /data/external.
+   Download data.zip from [this Google Drive](https://drive.google.com/open?id=1PYBLEQ2ZS8a7eCj7XsOwSs2guDWoHLiJ)
+   and unzip into /data/external.
 
-
-4. **Virtual environment**
-`cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
+4) **Virtual environment**
+   `cd` to that directory, make sure Pipfile is located there, then run `pipenv shell` followed by `pipenv install` to install all of the package dependencies.
 
 To use this virtual environment, run `pipenv shell`
 and to use it in a jupyter notebook, run `pipenv run jupyter notebook` when the shell is activated.
@@ -55,8 +53,8 @@ You can also load all functional data at once, then do your own filtering. Howev
 load_data.load_all_functional_data(geo_level='county')
 ```
 
-
 # Other references
+
 [Locus DB guide](https://github.com/LocusAnalytics/locus_db)
 
 [Locus Handler guide](https://pypi.org/project/locushandler/#description)
